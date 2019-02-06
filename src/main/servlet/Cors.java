@@ -12,11 +12,14 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * Servlet Filter implementation class Cors
  */
 @WebFilter("/Cors")
 public class Cors implements Filter {
+	private Logger logger = LoggerFactory.getLogger(Cors.class);
 
     /**
      * Default constructor. 
@@ -36,11 +39,10 @@ public class Cors implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
 		// Cast the ServletRequest to an HttpServletRequest in order to get the HTTP
 		// Method attached with the request
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
-		System.out.println("CORSFilter HTTP Request: " + httpRequest.getMethod());
+		logger.trace("CORSFilter HTTP Request: " + httpRequest.getMethod());
 
 		// Authorize domain(s) to consume the content
 		/*

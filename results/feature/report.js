@@ -125,24 +125,6 @@ formatter.step({
   "name": "yet another action",
   "keyword": "And "
 });
-formatter.step({
-  "line": 30,
-  "name": "I validate the outcomes",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 31,
-  "name": "check more outcomes",
-  "keyword": "And "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
 formatter.match({});
 formatter.result({
   "status": "undefined"
@@ -164,7 +146,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.scenarioOutline({
-  "line": 34,
+  "line": 32,
   "name": "Title of your scenario outline",
   "description": "",
   "id": "title-of-your-feature;title-of-your-scenario-outline",
@@ -172,28 +154,28 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 33,
+      "line": 31,
       "name": "@tag2"
     }
   ]
 });
 formatter.step({
-  "line": 35,
+  "line": 33,
   "name": "I want to write a step with \u003cname\u003e",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 36,
+  "line": 34,
   "name": "I check for the \u003cvalue\u003e in step",
   "keyword": "When "
 });
 formatter.step({
-  "line": 37,
+  "line": 35,
   "name": "I verify the \u003cstatus\u003e in step",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 39,
+  "line": 37,
   "name": "",
   "description": "",
   "id": "title-of-your-feature;title-of-your-scenario-outline;",
@@ -204,7 +186,7 @@ formatter.examples({
         "value",
         "status"
       ],
-      "line": 40,
+      "line": 38,
       "id": "title-of-your-feature;title-of-your-scenario-outline;;1"
     },
     {
@@ -213,7 +195,7 @@ formatter.examples({
         "5",
         "success"
       ],
-      "line": 41,
+      "line": 39,
       "id": "title-of-your-feature;title-of-your-scenario-outline;;2"
     },
     {
@@ -222,14 +204,14 @@ formatter.examples({
         "7",
         "Fail"
       ],
-      "line": 42,
+      "line": 40,
       "id": "title-of-your-feature;title-of-your-scenario-outline;;3"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 41,
+  "line": 39,
   "name": "Title of your scenario outline",
   "description": "",
   "id": "title-of-your-feature;title-of-your-scenario-outline;;2",
@@ -241,13 +223,13 @@ formatter.scenario({
       "name": "@tag"
     },
     {
-      "line": 33,
+      "line": 31,
       "name": "@tag2"
     }
   ]
 });
 formatter.step({
-  "line": 35,
+  "line": 33,
   "name": "I want to write a step with name1",
   "matchedColumns": [
     0
@@ -255,7 +237,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 36,
+  "line": 34,
   "name": "I check for the 5 in step",
   "matchedColumns": [
     1
@@ -263,7 +245,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 37,
+  "line": 35,
   "name": "I verify the success in step",
   "matchedColumns": [
     2
@@ -283,7 +265,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.scenario({
-  "line": 42,
+  "line": 40,
   "name": "Title of your scenario outline",
   "description": "",
   "id": "title-of-your-feature;title-of-your-scenario-outline;;3",
@@ -295,13 +277,13 @@ formatter.scenario({
       "name": "@tag"
     },
     {
-      "line": 33,
+      "line": 31,
       "name": "@tag2"
     }
   ]
 });
 formatter.step({
-  "line": 35,
+  "line": 33,
   "name": "I want to write a step with name2",
   "matchedColumns": [
     0
@@ -309,7 +291,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 36,
+  "line": 34,
   "name": "I check for the 7 in step",
   "matchedColumns": [
     1
@@ -317,7 +299,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 37,
+  "line": 35,
   "name": "I verify the Fail in step",
   "matchedColumns": [
     2

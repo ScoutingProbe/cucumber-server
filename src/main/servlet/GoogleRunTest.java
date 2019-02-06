@@ -1,8 +1,5 @@
 package main.servlet;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -10,6 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import main.batch.Result;
+import main.batch.Run;
 
 /**
  * Servlet implementation class GoogleRunTest
@@ -33,10 +33,10 @@ public class GoogleRunTest extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// run tests
-		RunUtil.runGoogleTest();
+		Run.runGoogleTest();
 
 		// read results
-		String string = ResultUtil.readGoogleResult();
+		String string = Result.readGoogleResult();
 
 		response.setContentType("application/json");
 		response.getWriter().write(string);
@@ -52,36 +52,4 @@ public class GoogleRunTest extends HttpServlet {
 		doGet(request, response);
 	}
 
-}
-
-class RunUtil {
-	public static void runGoogleTest() {
-		String batchDirectory = "C:\\Users\\andrewsrahn\\Documents\\spring-developer\\cucumber-serverr\\batches\\GoogleRunTest.bat";
-		try {
-			Runtime.getRuntime().exec("cmd /c " + batchDirectory);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-}
-
-class ResultUtil {
-	public static String readGoogleResult() {
-		try {
-
-			String resultsDirectory = "C:\\Users\\andrewsrahn\\Documents\\spring-developer\\cucumber-serverr\\results\\google_search.json";
-			BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(resultsDirectory)));
-			String string = "";
-
-			while (bufferedReader.ready())
-				string += bufferedReader.readLine();
-
-			bufferedReader.close();
-			return string;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return "{'problems': 'true'}";
-	}
 }
