@@ -1,0 +1,20 @@
+p.comment {
+	color: red;
+}
+
+p.tag {
+	color: blue;
+}
+
+span.keyword-type {
+	color: springgreen;
+}
+
+span.keyword-step {
+	color: seagreen;
+}
+
+span.step-name {
+	color: black;
+}
+

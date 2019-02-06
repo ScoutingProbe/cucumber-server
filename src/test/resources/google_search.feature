@@ -20,11 +20,11 @@
 Feature: Google.com search result feature
 	I will search for pokemon and digimon wikipedia anchors with scenario outline. 
 
-  @sex
-  Scenario: Search images for sex
+  @cucumber
+  Scenario: Search images for cucumber
     Given I get google.com
-    When I click on image and search for Korean milf
-    Then I verify korean milf appears on the page
+    When I click on image and search for cucumber
+    Then I verify cucumber appears
 
   @anime
   Scenario Outline: Search monster anime wikipedia anchors
@@ -33,6 +33,6 @@ Feature: Google.com search result feature
     Then I will see <anchor>
     
     Examples:
-    	| monster			| anchor																																			|
-    	| pokemon			| https://wikipedia.org/pokemon|																							
-    	| digimon			| https://wikipedia.org/digimon|
+    	| monster			| anchor												|
+    	| pokemon			| https://wikipedia.org/pokemon	|																							
+    	| digimon			| https://wikipedia.org/digimon	|
